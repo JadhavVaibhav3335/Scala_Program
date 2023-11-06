@@ -1,18 +1,14 @@
-object CommonElementsBetweenSets {
-  def main(args: Array[String]): Unit = {
-    println("Enter elements for the first set (comma-separated):")
-    val inputSet1 = scala.io.StdIn.readLine().split(",").map(_.trim).toSet
-
-    println("Enter elements for the second set (comma-separated):")
-    val inputSet2 = scala.io.StdIn.readLine().split(",").map(_.trim).toSet
-
-    val commonElements = inputSet1.intersect(inputSet2)
-
-    if (commonElements.nonEmpty) {
-      println("Common elements between the two sets:")
-      commonElements.foreach(println)
-    } else {
-      println("No common elements found between the two sets.")
-    }
-  }
-}
+object comm
+{
+	def main(args: Array[String])
+	{
+		val s1 = Set(10, 20, 40, 50, 30)
+		val s2 = Set(20, 30, 70, 80, 90)
+	
+		print("Set 1: " + s1)
+		print("\nSet 2: " + s2)
+	
+		val comm = s1.intersect(s2)
+		
+		println("\nCommon elements: " + comm)
+	}-
